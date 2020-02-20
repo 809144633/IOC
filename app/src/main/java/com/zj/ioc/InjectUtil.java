@@ -39,7 +39,6 @@ public class InjectUtil {
                             View view = (View) cls
                                     .getMethod("findViewById", int.class)
                                     .invoke(context, id);
-
                             if (view != null) {
                                 ListenerInvocationHandler handler =
                                         new ListenerInvocationHandler(context, method);
